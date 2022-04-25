@@ -1,0 +1,31 @@
+function free_drive
+    Creates a publisher to the cmd_vel topic
+    Shows the commands for the free drive modality
+    While True
+        Gets the user command
+        If the command is b 
+            Exits from the while loop;
+
+        Else if the command is w
+            Increases linear speed;
+
+        Else if the command is s
+            Decreases linear speed;
+
+        Else if the command is d
+            Turn right;
+
+        Else if the command is a
+            Turn left;
+
+        Else if the command is x
+            Stops linear speed;
+
+        Else if the command is z
+            Stops angular speed;
+
+        Prints on the info window the linear speed
+        Prints on the info window the angular speed
+        Publishes the speed on the topic my_vel;
+
+    Stops the robot

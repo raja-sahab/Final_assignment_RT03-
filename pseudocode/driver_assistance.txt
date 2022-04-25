@@ -1,0 +1,106 @@
+function functionCallback:
+   it is for the base_scan subscriber
+   if
+     is_active=true
+     Copies the ranges values in the base_scan message into an array
+     Calls the function scanSector to fill the sectors array
+   else if
+     function logic can take decision, call it
+   else
+     call function integral_logic
+
+function scanSectors:
+   to search for the closest obstacle in each sector
+   If it finds a closest obstacle, than update the sectors array
+   
+function logic:
+   It makes choices based on the values into the sectors array
+   if
+     front sector is free
+     look for front-right and front-left sector to allign with path
+   else if
+     obstacle is on front
+     then search left and right sectors respectively to find obstacle-free path and move accordingly
+   else
+     no sector is obstacle free then return 0
+     
+function integral_logic:
+   Function to decide where to go when there are obstales all around the robot
+   if
+     right-area is greater than left area
+     turn right
+   else
+     turn left
+
+function integral
+   Function to perform a discrete integral with the trapezium method
+   while
+      l is less than end
+      use formula
+      return result
+      
+function drive
+   Function to drive the robot, 
+   filling the geometry message and publishing it on the topic cmd_vel
+   
+function server_response
+   it sets the speed of the motor depending on the message
+   if
+     input is 's' decrease linear-speed by 0.1
+   else if 
+     input is 'w' increase linear-speed by 0.1
+   else if 
+     input is 'x' reset linear-speed to 0.0
+   else if 
+     input is 'z' reset angular-speed to 0.0
+   else if 
+     input is 'd' decrease angular-speed by 0.1
+   else if 
+     input is 'a' increase angular-speed by 0.1
+   else if
+     input is '0' is_active=true
+   else if
+     input is '1' is_active=false
+     
+function main
+   initialize driver_assistance node
+   intialize values of global-variables
+     speed=0.0
+     d_br=1.2
+   subscribe to the topic base_scan
+   create a service for keyboard input to control the robot
+   Creates a publisher to the cmd_vel topic for real-time controlling
+   return 0
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

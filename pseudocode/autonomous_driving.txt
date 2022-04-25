@@ -1,0 +1,26 @@
+class autonomous_driving
+    init
+        Creates the move_action client
+
+    function active_cb
+        Increments the goal counter
+        Prints info
+
+
+    function feedback_cb
+        Increments the feedback counter
+        Prints info
+
+    function done_cb
+        Sets the active value to False
+        Prints info about the returned value
+
+    function reach_goal
+        Sets the active value to True
+        Waits until the action server has started
+        Prints the new available commands
+        Creates a goal to send to the action server
+        Sends the goal to the action server
+
+    function cancel_goal
+        Sent a cancel goal to the action server

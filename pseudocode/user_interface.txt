@@ -1,0 +1,25 @@
+class windows_organiser
+   init
+	Creates the win_modes wiindow for showing the available commands
+	Creates the win_info window for printing information
+	acquiring the user input and print it
+		
+   function clear_modes
+	Clears and resets the win_modes
+		
+   function clear_info
+	Clears and reset the win_info
+		
+   function clear_input
+	Clears the win_input
+		
+   function clear_request
+	Clears the win_request
+		
+   function set_wasd
+	Shows into the win_modes the command for directly drive the robot
+		
+   function command_not_valid
+	Sends the command not valid message into win_request
+		
+	
