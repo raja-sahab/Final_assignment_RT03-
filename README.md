@@ -14,6 +14,8 @@ The architecture should be able to get the user request, and let the robot execu
 Run the program with:
 
 ```bash
+$ git clone the respository
+$ make all scripts executable from anywhere
 $ roslaunch final_assignment assignment.launch
 ```
 
